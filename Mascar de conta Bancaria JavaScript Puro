@@ -1,0 +1,14 @@
+<script>
+function mascaraConta(conta) {
+  if (conta.value.length > 1) {
+    conta.value = conta.value.replace(/-/g, "");
+    var digito = conta.value[conta.value.length -1];
+    var contaSemDigito = conta.value.slice(0, -1);
+    console.log(digito);
+    conta.value = contaSemDigito + "-" + digito;
+  }
+}
+</script>
+<html>
+<input type="text" onkeyup="mascaraConta(this)" maxlength="10"/>
+</html
